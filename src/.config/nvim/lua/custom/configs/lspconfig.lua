@@ -1,10 +1,10 @@
 local on_attach = require("plugins.configs.lspconfig").on_attach
 local capabilities = require("plugins.configs.lspconfig").capabilities
 
-local lspconfig = require "lspconfig"
+local lspconfig = require("lspconfig")
 
--- if you just want default config for the servers then put them in a table
-local servers = {}
+-- servers with no config  
+local servers = {"clangd", "html", "cssls"}
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup {
@@ -13,5 +13,13 @@ for _, lsp in ipairs(servers) do
   }
 end
 
--- 
--- lspconfig.pyright.setup { blabla}
+lspconfig.omnisharp.setup {
+  cmd = { "omnisharp" },
+  enable_editorconfig_support = true,
+  enable_ms_build_load_projects_on_demand = false,
+  enable_roslyn_analyzers = false,
+  organize_imports_on_format = false,
+  enable_import_completion = false,
+  sdk_include_prereleases = true,
+  analyze_open_documents_only = false,
+}

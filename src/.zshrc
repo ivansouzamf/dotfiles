@@ -1,7 +1,7 @@
 # .zshrc
 
 # PATH config. 
-export PATH=$HOME/.local/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$HOME/.local/share/nvim/mason/bin/:/usr/local/bin:$PATH
 
 # Path to oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
