@@ -7,6 +7,18 @@ M.general = {
   },
 }
 
--- more keybinds!
+M.dap = {
+  plugin = true,
+  n = {
+    ["<leader><F3>"] = {
+      "<cmd> DapToggleBreakpoint <CR>",
+      "Add a breakpoint",
+    },
+    ["<leader><F4>"] = {
+      "<cmd> DapContinue <CR>",
+      "DAP Continue",
+    }
+  }
+}
 
 return M
