@@ -25,6 +25,8 @@ require('lazy').setup({
   'tpope/vim-sleuth',
   -- Move code
   'fedepujol/move.nvim',
+  -- Autopairs for brackets
+  require("plugins/autopairs"),
   -- Lsp
   require("plugins/lsp"),
   -- Autocompletion
