@@ -25,6 +25,8 @@ require('lazy').setup({
   'tpope/vim-sleuth',
   -- Move code
   'fedepujol/move.nvim',
+  -- Discord RPC
+  'andweeb/presence.nvim',
   -- Autopairs for brackets
   require("plugins/autopairs"),
   -- Lsp
@@ -114,3 +116,5 @@ require("configs/treesitter")
 require("configs/lsp")
 -- [[ Configure nvim-cmp ]]
 require("configs/cmp")
+-- [[ Configure presence.nvim ]]
+require("configs/presence")
