@@ -26,3 +26,6 @@ export EDITOR='nvim'
 
 # Wayland configs.
 export SDL_VIDEODRIVER=wayland
+export QT_QPA_PLATFORM="wayland;xcb"
+export QT_WAYLAND_DISABLE_WINDOWDECORATION=1
+export QT_QPA_PLATFORMTHEME=qt5ct
