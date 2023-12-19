@@ -74,6 +74,10 @@ vim.o.timeoutlen = 300
 vim.o.completeopt = 'menuone,noselect'
 -- NOTE: Could have problems in some terminals 
 vim.o.termguicolors = true
+-- Set tab size
+vim.opt.tabstop = 4
+vim.opt.shiftwidth = 4
+vim.opt.expandtab = true
 
 
 -- [[ Basic Keymaps ]]
