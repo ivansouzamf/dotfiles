@@ -1,0 +1,5 @@
+* {
+  accent: #f0c6c6;
+}
+
+@import "./palletes/macchiato"
