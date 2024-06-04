@@ -24,7 +24,7 @@ require('lazy').setup({
   -- Configure tabs automatically
   'tpope/vim-sleuth',
   -- Move code
-  'fedepujol/move.nvim',
+  { 'fedepujol/move.nvim', opts = {} },
   -- Discord RPC
   'andweeb/presence.nvim',
   -- Autopairs for brackets
@@ -110,7 +110,14 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   group = highlight_group,
   pattern = '*',
 })
-
+--[[
+vim.api.nvim_create_autocmd("LspAttach", {
+  callback = function(args)
+    local client = vim.lsp.get_client_by_id(args.data.client_id)
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
+})
+--]]
 
 -- [[ Configure Telescope ]]
 require("configs/telescope")
