@@ -13,8 +13,9 @@
   "hyprland/workspaces": {
     "format": "{id}",
     "sort-by-number": true,
-    "persistent_workspaces": {
-      "*": 6 
+    "all-outputs" : true,	
+    "persistent-workspaces": {
+      "*": 6
     }
   },
 
