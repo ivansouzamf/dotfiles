@@ -3,12 +3,12 @@ return {
   branch = '0.1.x',
   dependencies = {
     'nvim-lua/plenary.nvim',
-    -- NOTE: requires `cmake` to work
+    -- NOTE: requires `make` to work
     {
       'nvim-telescope/telescope-fzf-native.nvim',
-      build = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
+      build = 'make',
       cond = function()
-        return vim.fn.executable 'cmake' == 1
+        return vim.fn.executable 'make' == 1
       end,
     },
   },

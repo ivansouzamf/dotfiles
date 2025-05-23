@@ -57,7 +57,7 @@
   "custom/logo": {
     "format": "",
     "tooltip": false,
-    "on-click": "~/.local/bin/menu/launcher.sh drun"
+    "on-click": "~/.local/bin/menu/launcher.sh"
   },
 
   "custom/power": {
