@@ -21,18 +21,18 @@ confirm_dialog() {
 
 case "$chosen" in
 	"$shutdown")
-		execute "shutdown -h now" "shutdown"
+		confirm_dialog "shutdown -h now" "shutdown"
 	;;
 	"$reboot")
-		execute "reboot" "reboot"
+		confirm_dialog "reboot" "reboot"
 	;;
 	"$lock")
 		waylock
 	;;
 	"$suspend")
-		execute "systemctl suspend" "suspend"
+		confirm_dialog "systemctl suspend" "suspend"
 	;;
 	"$logout")
-		execute "kill -9 -1" "quit"
+		confirm_dialog "kill -9 -1" "quit"
 	;;
 esac
